@@ -1,0 +1,241 @@
+.VSW
+  &_active
+    background-color: #eee
+
+  &_disabled
+    opacity: 0.5
+    cursor: not-allowed
+
+  &__Dialog
+    position: absolute
+    z-index: 1000
+    background-color: #fff
+    padding: 1px
+    border: 1px solid #ccc
+    border-radius: 5px
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2)
+    box-shadow: 0 5px 10px rgba(0,0,0,.2)
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    left: -21px
+    margin-top: 10px
+    transform: translateX(-45%)
+    &:before
+      position: absolute
+      z-index: -1
+      content: ''
+      left: calc(45% + 25px)
+      top: -10px
+      border-style: solid
+      border-width: 0 10px 10px 10px
+      border-color: transparent transparent #ccc transparent
+      transition-duration: 0.3s
+      transition-property: transform
+    &_big
+      width: 356px
+    &_medium
+      width: 270px
+    &_small
+      width: 200px
+    &__Title
+      background: #f7f7f7
+      padding: 8px 14px
+      border-bottom: 1px solid #ebebeb
+      width: 100%
+    &__Info
+      color: #428BCA
+      font-size: 14px
+      padding: 8px
+      border-bottom: 1px solid #ebebeb
+      ul
+        list-style-position: inside
+        margin-left: 15px
+        li
+          list-style: square
+    &__Content
+      padding: 5px
+      &__Box
+        display: flex
+        margin: 10px 0
+        padding: 0 4px
+        &_checkbox
+          margin-top: 10px
+          label, input[type="checkbox"]
+            cursor: pointer
+        &_input
+          -webkit-box-flex: 1
+          -webkit-flex: 1
+          -moz-box-flex: 1
+          -ms-flex: 1
+          flex: 1
+          display: block
+          width: 100%
+          height: 32px
+          padding: 5px 10px
+          color: #555
+          background-color: #fff
+          border: 1px solid #ccc
+          outline: none
+          -webkit-box-sizing: border-box
+          -moz-box-sizing: border-box
+          box-sizing: border-box
+        &_btn
+          display: inline-block
+          margin: 0
+          padding: 5px 10px
+          text-align: center
+          white-space: nowrap
+          cursor: pointer
+          border: 1px solid #ccc
+          color: #333
+          outline: none
+          background-color: #fff
+          -webkit-user-select: none
+          -moz-user-select: none
+          -ms-user-select: none
+          user-select: none
+          line-height: (32-2*1-5*2)*1px
+          border-left: none
+          line-height: 16px
+          transition: all 0.2s ease 0s
+          &:disabled
+            background: #ccc
+          &:hover:not(:disabled)
+            background: #428BCA
+            color: #FFF
+          &-full
+            width: 100%
+
+  &__Editor
+    height: 400px
+    display: flex
+    flex-direction: column
+    border: 1px solid #ddd
+
+  &__Editor [contenteditable="true"]
+      ul
+        list-style-type: disc
+        margin-left: 1em
+      ol
+        list-style-type: decimal
+        margin-left: 1em
+
+  &__Component
+    &_design, &_html
+      flex: 1
+      overflow-y: auto
+    &_design
+      padding: 8px
+      [contenteditable="true"]
+        ul
+          list-style-type: disc
+          margin-left: 1em
+        ol
+          list-style-type: decimal
+          margin-left: 1em
+        &:focus
+          outline: 0px solid transparent
+
+    &_html
+      position: relative
+      overflow-y: auto
+      textarea
+        font-family: Consolas, "Courier New", monospace
+        position: absolute
+        box-sizing: border-box
+        display: block
+        width: 100%
+        height: 100%
+        outline: none
+        border: none
+        resize: none
+        font-size: 14px
+        padding: 8px
+
+  &__Toolbar
+    border-bottom: 1px solid #ddd
+    -webkit-user-select: none
+    -moz-user-select: none
+    user-select: none
+    display: table
+    width: 100%
+    font-size: 0
+    letter-spacing: -4px
+    div:not([class*="VSW__Dialog"])
+      position: relative
+      display: inline-block
+      font-size: initial
+      letter-spacing: initial
+      &>a
+        display: inline-block
+        padding: 5px 7px
+        color: rgba(0, 0, 0, 0.6)
+      &>a:not(.disabled):hover
+        background: #eee
+        color: #000
+    &__Group
+      border-right: 1px solid #ddd
+    &__Group.solo
+        float: right
+        border-right: 0
+        border-left: 1px solid #ddd
+
+  &__Colorpicker
+    display: inline-block
+    padding-left: 6px
+    margin-top: 10px
+    li
+      float: left
+      list-style: none
+      a
+        display: block
+        width: 22px
+        height: 22px
+    &.gray
+      li
+        &:last-child
+          border: 1px solid #ccc
+          width: 19px
+          height: 19px
+
+  &__Fonts, &__Sizes, &__Images
+    max-height: 300px
+    overflow-y: auto
+  &__Images
+    padding: 40px 8px 8px 8px
+    padding-top: 40px
+    li
+      margin: 3px 0
+      a
+        img
+          width: 100%
+  &__Headings, &__Fonts, &__Sizes
+    padding: 8px
+    li
+      padding: 5px 0
+      transition: all 0.2s ease 0s
+      &:hover
+        background: #428BCA
+        a
+          color: #FFF
+      a
+        width: 100%
+        text-decoration: none
+        padding: 0 5px
+
+  &__Tables
+    display: inline-block
+    margin-top: 10px
+    padding-left: 5px
+    li
+      float: left
+      &:hover
+      a
+        display: block
+        width: 20px
+        height: 20px
+        margin: 1px
+        border: 1px solid #ddd
+        &.active
+          background: #F7F7F7
