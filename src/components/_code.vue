@@ -56,6 +56,8 @@
 
         tag.appendChild(range.extractContents())
         range.insertNode(tag)
+
+	    this.$store.dispatch('updateContent', this.$el.children[0].innerHTML)
       },
 
       toggle () {

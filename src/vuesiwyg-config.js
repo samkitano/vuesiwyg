@@ -293,6 +293,5 @@ export default {
       native: false,
       title: 'Toggle View'
     }
-  ],
-  uploads: '/img'
+  ]
 }

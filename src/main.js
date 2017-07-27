@@ -1,32 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import VueSiWyg from './Vuesiwyg.vue'
-import config from './vuesiwyg-config'
-import createModule from './vuex/store'
+/**
+ * Vuesiwyg v1.0.1
+ *
+ * (c) 2017 Sam Kitano
+ * @license MIT
+ */
+import Component from './Vuesiwyg.vue'
 
-Vue.use(Vuex)
+const vuesiwyg = Component
 
-let vStore = createModule(config)
-let data = {
-  config,
-  components: [
-    'toolbar',
-    'editable',
-    'markup'
-  ]
-}
-
-Vue.config.productionTip = false
-
-/* eslint-disable no-new */
-Vue.component('Vuesiwyg', Object.assign({}, VueSiWyg, {
-  store: new Vuex.Store(vStore),
-  data: function () {
-    return data
-  }
-}))
-
-/* eslint-disable no-unused-vars */
-const app = new Vue({
-  el: '#app'
-})
+export default vuesiwyg

@@ -124,8 +124,11 @@
       },
 
       selectItem (evt) {
-        this.imgUrl = evt.target.getAttribute('src').trim()
-        this.insert()
+        this.$store.dispatch('execute', {
+	        name: 'insertHtml',
+	        value: `<img src="${evt.target.getAttribute('src').trim()}" alt="${this.imgAlt.trim()}">`
+        })
+	    this.updateDialog()
       },
 
       setRange (range) {

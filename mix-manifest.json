@@ -3,5 +3,6 @@
   "/dist/css/vuesiwyg.css": "/dist/css/vuesiwyg.css",
   "/mix.js": "/mix.js",
   "/dist/js/vuesiwyg.min.js": "/dist/js/vuesiwyg.min.js",
-  "/dist/css/vuesiwyg.min.css": "/dist/css/vuesiwyg.min.css"
+  "/dist/css/vuesiwyg.min.css": "/dist/css/vuesiwyg.min.css",
+  "/dist/js/vuesiwyg.stand-alone.min.js": "/dist/js/vuesiwyg.stand-alone.min.js"
 }
