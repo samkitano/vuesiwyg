@@ -118,9 +118,9 @@ npm install vuex --save
     * Vuesiwyg
     */
     import Vuex from 'vuex'
-    import Component from 'vuesiwyg'
-    import config from 'vuesiwyg/vuesiwyg-config'
-    import store from 'vuesiwyg/vuex/store'
+    import Component from 'vuesiwyg/src/Vuesiwyg.vue'
+    import config from 'vuesiwyg/src/vuesiwyg-config.js'
+    import store from 'vuesiwyg/src/vuex/store.js'
     Vue.use(Vuex)
 
     let vStore = store(config)
