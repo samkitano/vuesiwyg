@@ -97,11 +97,6 @@ Method 2 (Vue):
 npm install vuesiwyg --save
 ```
 
-2) make sure you have Vuex in your *package.json* dependencies. if you don't:
-```bash
-npm install vuex --save
-```
-
 2) add to resources/assets/js/app.js
 ```javascript
     /**
@@ -160,12 +155,7 @@ npm install vuex --save
 npm install vuesiwyg --save
 ```
 
-2) make sure you have Vuex in your *package.json* dependencies. if you don't:
-```bash
-npm install vuex --save
-```
-
-3) add to your index.js/main.js
+2) add to your index.js/main.js
 ```javascript
     /**
     * Vuesiwyg
