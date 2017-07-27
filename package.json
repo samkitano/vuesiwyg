@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "description": "A rich text to html wysiwyg editor",
   "author": "samkitano <sam.kitano@gmail.com>",
-  "private": true,
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
