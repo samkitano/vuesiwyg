@@ -1,11 +1,11 @@
-import Component from './src/Vuesiwyg'
-import Settings from './src/vuesiwyg-config'
-import Store from './src/vuex/store'
+const Component = require('./src/Vuesiwyg.vue')
+const Settings = require('./src/vuesiwyg-config.js')
+const Store = require('./src/vuex/store.js')
 
-const store = Store
-const settings = Settings
-const component = Component
+const vuesiwyg = {
+  Component,
+  Settings,
+  Store
+}
 
-exports.store = store
-exports.settings = settings
-exports.component = Component
+module.exports = vuesiwyg
