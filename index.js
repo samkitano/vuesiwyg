@@ -2,8 +2,10 @@ import Component from './src/Vuesiwyg'
 import Settings from './src/vuesiwyg-config'
 import Store from './src/vuex/store'
 
-export default {
-  Store,
-  Settings,
-  Component
-}
+const store = Store
+const settings = Settings
+const component = Component
+
+exports.store = store
+exports.settings = settings
+exports.component = Component
