@@ -113,15 +113,17 @@ npm install vuesiwyg --save
     * Vuesiwyg
     */
     import Vuex from 'vuex'
-    import Component from 'vuesiwyg/src/Vuesiwyg.vue'
-    import config from 'vuesiwyg/src/vuesiwyg-config.js'
-    import store from 'vuesiwyg/src/vuex/store.js'
+    import vsw from 'vuesiwyg'
+
+    const conf = vsw.Settings
+    const store = vsw.Store
+    const component = vsw.Component
 
     Vue.use(Vuex)
 
-    let vStore = store(config)
+    const vStore = store(conf)
     let vStoreData = {
-      config,
+      conf,
       components: [
         'toolbar',
         'editable',
@@ -129,7 +131,7 @@ npm install vuesiwyg --save
       ]
     }
 
-    const vuesiwyg = Vue.component('vuesiwyg', Object.assign({}, Component, {
+    const vuesiwyg = Vue.component('vuesiwyg', Object.assign({}, component, {
       store: new Vuex.Store(vStore),
       data: function () {
         return vStoreData
@@ -162,15 +164,17 @@ npm install vuesiwyg --save
     * Vuesiwyg
     */
     import Vuex from 'vuex'
-    import Component from 'vuesiwyg/src/Vuesiwyg.vue'
-    import config from 'vuesiwyg/src/vuesiwyg-config.js'
-    import store from 'vuesiwyg/src/vuex/store.js'
+    import vsw from 'vuesiwyg'
+
+    const conf = vsw.Settings
+    const store = vsw.Store
+    const component = vsw.Component
 
     Vue.use(Vuex)
 
-    let vStore = store(config)
+    const vStore = store(conf)
     let vStoreData = {
-      config,
+      conf,
       components: [
         'toolbar',
         'editable',
@@ -178,7 +182,7 @@ npm install vuesiwyg --save
       ]
     }
 
-    const vuesiwyg = Vue.component('vuesiwyg', Object.assign({}, Component, {
+    const vuesiwyg = Vue.component('vuesiwyg', Object.assign({}, component, {
       store: new Vuex.Store(vStore),
       data: function () {
         return vStoreData
