@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import Vuex from 'vuex'
 import Component from 'vuesiwyg/src/Vuesiwyg.vue'
 import config from 'vuesiwyg/src/vuesiwyg-config.js'
