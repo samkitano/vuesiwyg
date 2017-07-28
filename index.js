@@ -8,4 +8,4 @@ const vuesiwyg = {
   Store
 }
 
-module.exports = vuesiwyg
+export default vuesiwyg
