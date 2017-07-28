@@ -18,7 +18,7 @@ const mutations = {
   },
 
   UPDATE_ACTIVE_TOOLS (state, doc) {
-    for (let i in state.tools[i]) {
+    for (let i in state.tools) {
       if (doc) {
         state.tools[i].active = doc.queryCommandState(name)
       } else {
@@ -48,7 +48,7 @@ const mutations = {
   UPDATE_DISABLED_TOOLS (state, json) {
     let disabled = state.currentView !== 'design'
 
-    for (let i in state.tools[i]) {
+    for (let i in state.tools) {
       state.tools[i].disabled = disabled
     }
 
