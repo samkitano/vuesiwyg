@@ -1,6 +1,6 @@
 {
   "name": "vuesiwyg",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A rich text to html wysiwyg editor",
   "author": "samkitano <sam.kitano@gmail.com>",
   "scripts": {
