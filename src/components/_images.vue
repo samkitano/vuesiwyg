@@ -125,10 +125,11 @@
 
       selectItem (evt) {
         this.$store.dispatch('execute', {
-	        name: 'insertHtml',
-	        value: `<img src="${evt.target.getAttribute('src').trim()}" alt="${this.imgAlt.trim()}">`
+          name: 'insertHtml',
+          value: `<img src="${evt.target.getAttribute('src').trim()}" alt="${this.imgAlt.trim()}">`
         })
-	    this.updateDialog()
+
+        this.updateDialog()
       },
 
       setRange (range) {
